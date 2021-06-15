@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>
+  <div fxLayout="row" fxLayoutAlign="space-between">
+    <span>Histórico de {{historyType}} </span>
+    <button mat-icon-button (click)="close()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</h1>
+
+<mat-dialog-content class="mat-typography">
+  <iframe *ngIf="historyType === 'Temperatura'" width="450" height="260"
+    src="https://thingspeak.com/channels/1063488/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15">
+  </iframe>
+
+  <iframe *ngIf="historyType === 'Luminosidade'" width="450" height="260"
+    src="https://thingspeak.com/channels/1063488/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15">
+  </iframe>
+
+  <iframe *ngIf="historyType === 'Distância'" width="450" height="260"
+    src="https://thingspeak.com/channels/1063488/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15">
+  </iframe>
+
+  <iframe *ngIf="historyType === 'Umidade'" width="450" height="260"
+    src="https://thingspeak.com/channels/1063488/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15">
+  </iframe>
+</mat-dialog-content>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "pet-feeder-bc946": {
+      "hosting": {
+        "projeto-iot": [
+          "pet-feeder-bc946"
+        ]
+      }
+    }
+  }
+}

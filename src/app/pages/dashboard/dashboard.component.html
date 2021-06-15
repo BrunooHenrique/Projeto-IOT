@@ -1,0 +1,74 @@
+<div class="page-layout blank p-24" fusePerfectScrollbar>
+
+  <div class="mb-24" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-md="row">
+    <div class="mat-card form-errors-model p-24 mat-elevation-z4" fxLayout="column" fxFlex="100">
+
+      <div class="grid-container" fxLayoutAlign="center">
+        <app-card-data fxFlex="100" title="Temperatura" data={{room.temperatura}}
+          (showHistoryEvent)="showHistory($event)">
+        </app-card-data>
+        <app-card-data fxFlex="100" title="Luminosidade" data={{room.luminosidade}}
+          (showHistoryEvent)="showHistory($event)">
+        </app-card-data>
+      </div>
+
+      <div class="grid-container" fxLayoutAlign="center">
+        <app-card-data fxFlex="100" title="Distância" data={{room.distancia}} (showHistoryEvent)="showHistory($event)">
+        </app-card-data>
+        <app-card-data fxFlex="100" title="Umidade" data={{room.umidade}} (showHistoryEvent)="showHistory($event)">
+        </app-card-data>
+      </div>
+
+
+      <div class="sets">
+        <div class="grid-container" fxLayoutAlign="center">
+          <mat-card>
+            <div fxLayout="column" fxLayoutAlign="start center" fxFlex="100">
+              <img *ngIf="!room.set_porta" class="image" src="assets/images/porta_fechada.png">
+              <img *ngIf="room.set_porta" class="image" src="assets/images/porta_aberta.png">
+
+              <mat-slide-toggle [checked]="room.set_porta ? true : false" color="primary"
+                (change)="switchDoorStatus($event.checked)">
+              </mat-slide-toggle>
+            </div>
+          </mat-card>
+
+
+          <mat-card>
+            <div fxLayout="column" fxLayoutAlign="start center" fxFlex="100">
+              <img *ngIf="!room.set_ar" class="image" src="assets/images/floco_de_neve_cinza.png">
+              <img *ngIf="room.set_ar" class="image" src="assets/images/floco_de_neve_azul.png">
+
+              <mat-slide-toggle [checked]="room.set_ar ? true : false" color="primary"
+                (change)="switchArStatus($event.checked)">
+              </mat-slide-toggle>
+            </div>
+          </mat-card>
+
+          <mat-card>
+            <div fxLayout="column" fxLayoutAlign="start center" fxFlex="100">
+              <img *ngIf="!room.set_luminosidade" class="image" src="assets/images/lampada_desligada.png">
+              <img *ngIf="room.set_luminosidade" class="image" src="assets/images/lampada_ligada.png">
+
+              <mat-slide-toggle [checked]="room.set_luminosidade ? true : false" color="primary"
+                (change)="switchLuminosidadeStatus($event.checked)">
+              </mat-slide-toggle>
+            </div>
+          </mat-card>
+
+          <mat-card>
+            <div fxLayout="column" fxLayoutAlign="start center" fxFlex="100">
+              <img *ngIf="!room.set_multimidia" class="image" src="assets/images/power_off.png">
+              <img *ngIf="room.set_multimidia" class="image" src="assets/images/power_on.png">
+
+              <mat-slide-toggle [checked]="room.set_multimidia ? true : false" color="primary"
+                (change)="switchMultimidiaStatus($event.checked)">
+              </mat-slide-toggle>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

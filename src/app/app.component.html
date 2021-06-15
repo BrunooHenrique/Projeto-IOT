@@ -1,0 +1,14 @@
+<ngx-spinner></ngx-spinner>
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened class="teste" >
+    <div fxLayout fxLayout="column" fxLayoutAlign="start center">
+      <app-card-profile name="Igor Jales" universityId="201851235604"></app-card-profile>
+      <app-card-profile name="Victor Silva" universityId="201851343024"></app-card-profile>
+      <app-card-profile name="Bruno Henrique" universityId="201851180923"></app-card-profile>
+      <app-card-profile name="Vinicius Coelho" universityId="201851204491"></app-card-profile>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

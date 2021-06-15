@@ -1,0 +1,29 @@
+.image {
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+  margin-right: 6%;
+}
+
+.mat-card {
+  width: 240px;
+  margin-top: 26px;
+}
+
+.mat-card-title {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.subtitle {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+}
